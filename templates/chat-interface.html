@@ -1,0 +1,62 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniQuery</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            border: 1px solid #EB5B00;
+            background-color: white;
+        }
+        .card-header, .btn {
+            background-color: #EB5B00;
+            color: white;
+        }
+        .form-label {
+            color: #EB5B00;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header text-center">
+            <h1>MySQL Configuration</h1>
+        </div>
+        <div class="card-body">
+            <form id="mysqlConfigForm" method="POST">
+                <div class="form-group">
+                    <label for="host" class="form-label">Host:</label>
+                    <input type="text" class="form-control" id="host" name="host">
+                </div>
+                <div class="form-group">
+                    <label for="username" class="form-label">Username:</label>
+                    <input type="text" class="form-control" id="username" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+                <div class="form-group">
+                    <label for="database" class="form-label">Database:</label>
+                    <input type="text" class="form-control" id="database" name="database">
+                </div>
+                <button type="submit" class="btn btn-block">Connect</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='chat-interface.js') }}"></script>
+</body>
+</html>

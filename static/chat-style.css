@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+#main-container {
+    display: flex;
+    flex-grow: 1;
+    margin-right: 30vw; /* Match the width of the schema */
+    height: 1px;
+}
+
+#chat-container {
+    flex-grow: 1;
+    height: calc(100vh - 40px); /* Adjust height to account for form padding */
+    background-color: whitesmoke;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+#schema {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30vw; /* Or any width you prefer */
+    height: calc(100vh - 40px); /* Full height minus the height of the chat form */
+    padding: 1em;
+    border: 1px solid black;
+    overflow-y: auto;
+}
+
+#chat-form {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-top: 1px solid #ccc;
+    z-index: 1; /* Ensures the form is above other content */
+}
+
+.form-inner {
+    display: flex; /* Enable flexbox */
+    justify-content: space-between; /* Space between input and button */
+    width: 100%;
+}
+
+#chat-form input {
+    flex-grow: 1;
+    font-size: 20px;
+    padding: 10px;
+    margin-right: 10px; /* Add space between input and button */
+    border-radius: 1em;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#chat-form button {
+    flex-shrink: 0;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 1em;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    background-color: #00aa0e;
+    cursor: pointer;
+}
+
+.chat-box-left {
+    padding: 10px;
+    max-width: fit-content;
+    display: block;
+    margin-right: auto;
+    overflow: scroll;
+}
+
+.chat-box-right {
+    padding: 10px;
+    max-width: fit-content;
+    display: block;
+    margin-left: auto;
+}
+
+.chat-message {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: flex-end;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.message div{
+    padding: 1em;
+}
+.message p {
+    margin: 0;
+}
+
+.message-right {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffa268;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+details {
+    margin-left: 20px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+details p {
+    margin-left: 20px;
+}
+.chart-style{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}

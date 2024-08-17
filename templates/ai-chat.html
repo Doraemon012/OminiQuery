@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniQuery Database Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='chat-style.css') }}">
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/atom-one-light.min.css" />
+    <link rel="stylesheet" href="https://cdn.bootcss.com/github-markdown-css/2.8.0/github-markdown.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js" integrity="sha512-SYfDUYPg5xspsG6OOpXU366G8SZsdHOhqk/icdrYJ2E/WKZxPxze7d2HD3AyXpT7U22PZ5y74xRpqZ6A2bJ+kQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+</head>
+
+<body>
+    <div id="main-container">
+
+
+        <div id="chat-container">
+            <div class="chat-box">
+                <div class="chat-message">
+                    <div class="message">
+                        <p>Hello! How can I help you today?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="schema">
+            <h1>Schema</h1>
+            <br>
+            <hr><br>
+        </div>
+
+    </div>
+    <!-- form to chat with flask js -->
+    <form id="chat-form" method="POST">
+        <input type="text" id="user-input" name="messagePerson" placeholder="Type a message...">
+        <button type="submit">Send</button>
+    </form>
+</body>
+<script src="{{ url_for('static', filename='chat.js') }}"></script>
+
+
+</html>
